@@ -1,0 +1,17 @@
+<h2>Here are <%= @poems.count %> Poem Results</h2>
+
+<% @poems.each do |poem| %>
+<section class='poem'>
+  <h4 class='title'><%= poem[:title] %></h4>
+  <div class="author">
+    <%= poem[:author] %>
+  </div>
+  <div class="lines">
+    <%= poem[:lines] %>
+  </div>
+  <div class="tone">
+    <h4>Tone</h4>
+    <%= @tones[:document_tone][:tones][0][:tone_name] %>
+  </div>
+</section>
+<% end %>
